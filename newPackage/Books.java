@@ -89,6 +89,8 @@ public class Books extends Publishers {
         autnum = authors.length;
     }
     
+    
+    //вывод на печать экземпляра класса
     @Override
     public void print(){
         switch (autnum){

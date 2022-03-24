@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
 /**
  *
@@ -11,6 +7,7 @@ public class Publishers {
     protected String name;
     private String city;
 
+    //конструкторы
     public Publishers() {
     }
 
@@ -23,6 +20,7 @@ public class Publishers {
         return name;
     }
 
+    //геттеры и сеттеры
     public void setName(String name) {
         if(name.isEmpty())
             throw new IllegalArgumentException("Название издательства не задано!");
@@ -42,8 +40,9 @@ public class Publishers {
         this.city = city;
     }
 
-    
+    //вывод на печать
     public void print(){
+        
     }
     
     /*

@@ -10,12 +10,14 @@
 public class MainClass {
     public static void main(String[] args) {
         
+        //массив издательств
         Publishers[] pubArr = new Publishers[4];
         pubArr[0] = new Publishers("Проспект", "Москва");
         pubArr[1] = new Publishers("Питер", "Санкт-Петербург");
         pubArr[2] = new Publishers("БХВ", "Санкт-Петебург");
         pubArr[3] = new Publishers("Диалектика", "Киев");
  
+        //массив книг
         Books[] booksArr = new Books[5];
         booksArr[0] = new Books ("Computer Science: основы программирования на Java, ООП, алгоритмы и структуры данных", new String[]{"Седжвик Роберт", "Уэйн Кевин"}, pubArr[1].getCity(),  2018, pubArr[1].getName());
         booksArr[1] = new Books ("Разработка требований к программному обеспечению. 3-е издание, дополненное", new String[]{"Вигерс Карл"}, pubArr[2].getCity(), 2018, pubArr[2].getName());
