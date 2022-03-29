@@ -2,7 +2,6 @@
 package MainPackage;
 
 
-
 public class Publishers {
     protected String name;//название издательства
     private String city;//город издательства
@@ -20,6 +19,7 @@ public class Publishers {
         return name;
     }
 
+    
     //геттеры и сеттеры
     public void setName(String name) {
         if(name.isEmpty())
