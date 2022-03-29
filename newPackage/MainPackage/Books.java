@@ -12,7 +12,6 @@ public class Books {
     private String authors[];//массив авторов
     private int autnum;//количество авторов книги
     
-    
     //конструкторы
     public Books() {
     }
