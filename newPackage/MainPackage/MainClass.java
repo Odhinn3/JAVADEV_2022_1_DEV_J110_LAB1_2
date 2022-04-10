@@ -1,14 +1,5 @@
 package MainPackage;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author user
- */
 public class MainClass {
     public static void main(String[] args) {
         
@@ -44,9 +35,6 @@ public class MainClass {
         System.out.println();
         System.out.println("Вывод на печать массива с исправленной ошибкой");
         Books.printAll(booksArr);
-        
         System.out.println("End app");
-        
-
     }
 }

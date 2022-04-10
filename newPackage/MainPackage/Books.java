@@ -27,9 +27,7 @@ public class Books {
         this(title, pub, year);
         setAuthors(authors);
     }
-    
-    
-    
+
     //блок геттеров и сеттеров
     public String getTitle() {
         return title;
@@ -121,7 +119,5 @@ public class Books {
         for(Books c : booksArr){
             c.getAuth(0);
         }
-    }
-    
-       
+    }       
 }

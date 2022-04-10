@@ -1,7 +1,6 @@
 
 package MainPackage;
 
-
 public class Publishers {
     protected String name;//название издательства
     private String city;//город издательства
@@ -35,6 +34,5 @@ public class Publishers {
         if(city.isEmpty())
             throw new IllegalArgumentException("Город издательства не задан!");
         this.city = city;
-    }
-   
+    }   
 }
