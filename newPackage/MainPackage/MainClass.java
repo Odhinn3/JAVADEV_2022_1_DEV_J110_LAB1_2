@@ -37,9 +37,9 @@ public class MainClass {
         for(int i1 = 0; i1 < booksArr.length; i1++){
             if (booksArr[i1].getPub().getCity().equals("Санкт-Петебург")) {
                 booksArr[i1].getPub().setCity("Санкт-Петербург");
-            }
-            
+            }  
         }
+        
         //повторный вывод на печать информации из массива книг
         System.out.println();
         System.out.println("Вывод на печать массива с исправленной ошибкой");
