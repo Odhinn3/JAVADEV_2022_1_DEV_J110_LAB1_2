@@ -1,7 +1,4 @@
-
 package MainPackage;
-
-
 
 public class Publishers {
     protected String name;//название издательства
@@ -20,6 +17,7 @@ public class Publishers {
         return name;
     }
 
+    
     //геттеры и сеттеры
     public void setName(String name) {
         if(name.isEmpty())
@@ -35,6 +33,5 @@ public class Publishers {
         if(city.isEmpty())
             throw new IllegalArgumentException("Город издательства не задан!");
         this.city = city;
-    }
-   
+    }   
 }

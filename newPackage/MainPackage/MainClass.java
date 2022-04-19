@@ -1,14 +1,4 @@
 package MainPackage;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author user
- */
 public class MainClass {
     public static void main(String[] args) {
         
@@ -37,17 +27,13 @@ public class MainClass {
         for(int i1 = 0; i1 < booksArr.length; i1++){
             if (booksArr[i1].getPub().getCity().equals("Санкт-Петебург")) {
                 booksArr[i1].getPub().setCity("Санкт-Петербург");
-            }
-        
-            
+            }  
         }
+        
         //повторный вывод на печать информации из массива книг
         System.out.println();
         System.out.println("Вывод на печать массива с исправленной ошибкой");
         Books.printAll(booksArr);
-        
         System.out.println("End app");
-        
-
     }
 }

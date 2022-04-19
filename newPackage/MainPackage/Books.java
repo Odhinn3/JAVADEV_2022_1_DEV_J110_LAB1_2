@@ -1,4 +1,3 @@
-
 package MainPackage;
 
 import java.util.Arrays;
@@ -10,8 +9,6 @@ public class Books {
     private Publishers pub;//издательство (ссылка на экземпляр)
     private int year;//год издания
     private String authors[];//массив авторов
-    private int autnum;//количество авторов книги
-    
     
     //конструкторы
     public Books() {
@@ -22,19 +19,14 @@ public class Books {
         setTitle(title);
         setPub(pub);
         setYear(year);
-        autnum = 0;//если массив авторов не инициализирован, количество авторов = ноль
     }
 
     //конструктор экземпляра книги с авторами
     public Books(String title, String[] authors, Publishers pub, int year) {
         this(title, pub, year);
         setAuthors(authors);
-
-        autnum = authors.length;//если массив авторов инициализирован, количество авторов = длина массива
     }
-    
-    
-    
+
     //блок геттеров и сеттеров
     public String getTitle() {
         return title;
@@ -65,7 +57,6 @@ public class Books {
         this.year = year;
     }
 
-
     public String[] getAuthors() {
         return authors;
     }
@@ -74,43 +65,45 @@ public class Books {
         this.authors = authors;
     }
     
-     public int getAutnum() {
-        return autnum;
-    }
-
-    public void setAutnum(int autnum) {
-        this.autnum = autnum;
+    //метод, возвращающий количество авторов книги
+    public int getAutnum (){
+        int ai;
+        if (authors != null)
+            ai = authors.length;
+        else
+            ai = 0;
+        return ai;
     }
     
     //метод, возвращающий автора по индексу
     public String getAuth(int i) {
         if (i < 0)
             throw new IllegalArgumentException("Отрицательный индекс автора!");
-        else if (i >= autnum)
+        else if (i > authors.length)
             throw new IllegalArgumentException("Запрашиваемый индекс выше длины массива!");
         System.out.println(authors[i]);
         return authors[i];  
     }
 
-    //вывод на печать экземпляра класса
+    //вывод на печать экземпляра класса   
     public void print(){
-        switch (autnum){//вывод на печать в зависимости от наличия и количества авторов
-            case 1://для случаев, когда один автор
-                System.out.println("Название: " + getTitle() + ". Автор: "
-                        + Arrays.toString(getAuthors()) + ". " + getPub().getCity() + ": "
-                        + getPub().getName() + ", " + getYear()+ " // " + getAutnum());
-                break;
-            case 2://для случаев, когда авторов два
+        if (authors != null){
+            if (authors.length > 1) {
                 System.out.println("Название: " + getTitle() + ". Авторы: "
                         + Arrays.toString(getAuthors())  + ". " + getPub().getCity() + ": "
                         + getPub().getName() + ", " + getYear()+ " // " + getAutnum());
-                break;
-            default://для случаев, когда массив авторов не объявлен (авторы отсутствуют)
+                }
+            else {
+                System.out.println("Название: " + getTitle() + ". Автор: "
+                        + Arrays.toString(getAuthors()) + ". " + getPub().getCity() + ": "
+                        + getPub().getName() + ", " + getYear()+ " // " + getAutnum());
+            }
+        }
+        else {
                 System.out.println("Название: " + getTitle() + ", "
                         + getPub().getCity() + ": " + getPub().getName() + ". "
                         + getYear() + " // " + getAutnum());
         }
-        
     }
     
     //вывод на печать информации в массиве
@@ -125,7 +118,5 @@ public class Books {
         for(Books c : booksArr){
             c.getAuth(0);
         }
-    }
-    
-       
+    }       
 }
